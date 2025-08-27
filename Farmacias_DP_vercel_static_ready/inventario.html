@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventario — Farmacias y Consultorios DP</title>
+<style>
+:root{--primary:#1fbf5b;--bg:#f6f9f7;--text:#1c1c1c;--radius:16px}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--text);background:var(--bg)}
+.sidebar{position:fixed;left:0;top:0;bottom:0;width:300px;background:#fff;border-right:1px solid #eaeaea;padding:12px;display:flex;flex-direction:column;gap:12px}
+.brand{display:flex;align-items:center;gap:12px}.brand-logo{width:42px;height:42px;border-radius:50%;background:var(--primary);color:#fff;display:grid;place-items:center;font-weight:800}
+.nav{display:flex;flex-direction:column;gap:6px;overflow:auto}
+.nav a{display:block;text-decoration:none;color:inherit;padding:10px 12px;border-radius:10px;font-weight:600}
+.nav a:hover{background:#f2f7f4}
+.nav a.active{background:var(--primary);color:#fff}
+#main{margin-left:300px;padding:16px}
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;color:#666}
+.card{background:#fff;border:1px solid #eee;border-radius:var(--radius);overflow:hidden}
+.card-header{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-bottom:1px solid #eee}
+.card-body{padding:12px 14px}
+.grid{display:grid;gap:12px}.grid.two{grid-template-columns:2fr 1.2fr}.grid.three{grid-template-columns:repeat(3,1fr)}
+@media (max-width:1024px){.grid.two,.grid.three{grid-template-columns:1fr}}
+.table-wrap{width:100%;overflow:auto}table{width:100%;border-collapse:collapse}th,td{padding:10px;border-bottom:1px solid #f0f0f0;text-align:left}thead th{background:#fafafa}
+.list{display:grid;gap:8px}.item{display:flex;justify-content:space-between;align-items:center;background:#fafafa;border:1px solid #eee;border-radius:12px;padding:10px}
+.btn{border:0;padding:10px 14px;border-radius:12px;font-weight:700;cursor:pointer;background:#e9f8ee;color:#0f9a47}
+.btn.primary{background:var(--primary);color:#fff}
+.footer{margin-top:auto;color:#999;text-align:center}
+.badge{background:#eef9f1;color:#0f9a47;padding:6px 10px;border-radius:999px;font-weight:700}
+</style>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-logo">DP</div><div><strong>Farmacias &amp; Consultorios</strong><br><span>Dashboard</span></div></div>
+    <nav class="nav">
+      <a class="" href="index.html">TPV / Caja</a>
+<a class="active" href="inventario.html">Inventario</a>
+<a class="" href="clientes.html">Clientes</a>
+<a class="" href="consultorio.html">Consultorio</a>
+<a class="" href="laboratorio.html">Laboratorio</a>
+<a class="" href="reportes.html">Reportes</a>
+<a class="" href="facturacion.html">Facturación</a>
+<a class="" href="admin.html">Administración</a>
+<a class="" href="chat.html">Chat Interno</a>
+<a class="" href="config.html">Configuración</a>
+
+    </nav>
+    <footer class="footer"><small>© 2025 DP</small></footer>
+  </aside>
+  <main id="main">
+    <header class="topbar">
+      <div>Inicio / <span>Inventario</span></div>
+      <div class="badge">Rol: Admin</div>
+    </header>
+    <section class="card"><div class="card-header"><h3>Inventario</h3></div>
+  <div class="card-body"><div class="table-wrap"><table>
+    <thead><tr><th>SKU</th><th>Producto</th><th>Lote</th><th>Caducidad</th><th>Stock</th><th>Precio</th></tr></thead>
+    <tbody><tr><td>PARA-500</td><td>Paracetamol 500mg 10 tabs</td><td>A12</td><td>2026-02-01</td><td>35</td><td>$25.00</td></tr></tbody></table></div></div></section>
+  </main>
+</body>
+</html>
